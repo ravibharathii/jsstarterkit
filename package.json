@@ -4,11 +4,13 @@
   "description": "JavaScript development environment Starter Kit",
   "scripts": {
     "prestart": "babel-node buildScripts/startMessage.js",
-    "start":"npm-run-all --parallel secuirty-check server-start lint:watch",
+    "start":"npm-run-all --parallel secuirty-check server-start lint:watch test:watch",
     "server-start":"babel-node buildScripts/srcServer.js",
     "secuirty-check":"nsp check",
     "lint": "esw webpack.config.*, src, buildScripts --color",
-    "lint:watch": "npm run lint -- --watch"
+    "lint:watch": "npm run lint -- --watch",
+    "test": "mocha --report progress buildScripts/testSetup.js \"src/**/*.test.js\"",
+    "test:watch":"npm run test -- --watch"
   },
   "author": "Webtrix Team",
   "license": "MIT",
