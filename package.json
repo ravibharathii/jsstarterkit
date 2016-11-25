@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "description": "JavaScript development environment Starter Kit",
   "scripts": {
-    "prestart": "node buildScripts/startMessage.js",
+    "prestart": "babel-node buildScripts/startMessage.js",
     "start":"npm-run-all --parallel secuirty-check server-start",
-    "server-start":"node buildScripts/srcServer.js",
+    "server-start":"babel-node buildScripts/srcServer.js",
     "secuirty-check":"nsp check"
   },
   "author": "Webtrix Team",
