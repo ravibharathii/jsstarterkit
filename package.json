@@ -3,8 +3,12 @@
   "version": "1.0.0",
   "description": "JavaScript development environment Starter Kit",
   "scripts": {
+    "prestart": "node buildScripts/startMessage.js",
+    "start":"npm-run-all --parallel secuirty-check server-start",
+    "server-start":"node buildScripts/srcServer.js",
+    "secuirty-check":"nsp check"
   },
-  "author": "Cognizant Team",
+  "author": "Webtrix Team",
   "license": "MIT",
   "dependencies": {
     "whatwg-fetch": "1.0.0"
